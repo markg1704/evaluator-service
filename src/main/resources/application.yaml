@@ -1,0 +1,17 @@
+server:
+  port: {APP_PORT}
+spring:
+  datasource:
+    url: jdbc:h2:file:${DB_URL}
+    driverClassName: org.h2.Driver
+    username: ${DB_USER}
+    password: ${DB_PW}
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
